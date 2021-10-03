@@ -1,0 +1,252 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-handel-demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./javaScript.js"></script>
+</head>
+
+<body>
+    <!---------top header--------->
+
+    <div class="header-container">
+        <div class="top-logo">
+            <img src="./img/OfficeSupplies.png" width="225px">
+        </div>
+        <div class="search-container">
+            <form action="#">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit"><i class="product-search">Search</i></button>
+            </form>
+        </div>
+        <div class="cart-container">
+            <img src="./img/cart.png" class="cart" width="60px" height="30px">
+
+            <div class="cart-count">
+                <p><i>2st</i></p>
+            </div>
+            <div class="cart-total-price">
+                <h2 id="cart-totall-price"><input id="tot_amount" type="text" value="Total price" readonly></h2>
+                
+            </div>
+            <button type="button" onclick="#"><i class="checkout-button">Checkout</i></button>
+        </div>
+    </div>
+
+
+    <!-------------navbar------------>
+
+    <div class="nav-container">
+        <div class="navbar">
+
+            <div class="topnav" id="navTopnav">
+
+                <div class="dropdown">
+                    <button class="dropbtn">Products
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Paper clips</a>
+                        <a href="#">Post-it notes</a>
+                        <a href="#">Staples</a>
+                        <a href="#">Hole punches</a>
+                        <a href="#">Binders</a>
+                        <a href="#">Staplers</a>
+                        <a href="#">Laminators</a>
+                        <a href="#">Writing utensils</a>
+                        <a href="#">Computers</a>
+                        <a href="#">Printers</a>
+                        <a href="#">Fax machines</a>
+                        <a href="#">Photocopiers</a>
+                        <a href="#">Cash registers</a>
+                        <a href="#">Office furniture</a>
+                        <a href="#">Chairs</a>
+                        <a href="#">Cubicles</a>
+                        <a href="#">Filing cabinet</a>
+                        <a href="#">Armoire desks</a>
+                    </div>
+                </div>
+                <!----#For small platforms----->
+                <div class="header-container-small">
+                    <div class="top-logo-small">
+                        <img src="./img/OfficeSupplies.png" width="175px">
+                    </div>
+                    <div class="cart-container-small">
+                        <img src="./img/cart.png" class="cart" width="60px" height="30px">
+                    </div>
+                    <div class="cart-count-small">
+                        <p><i>2st</i></p>
+                    </div>
+                </div>
+                <!-----#------------------>
+                <a href="#" id="inspir-office-nav">Inspirations</a>
+                <a href="#" id="about-us-nav">About us</a>
+            </div>
+        </div>
+    </div>
+
+    <!---------single product details--------->
+
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="./img/paper1.jpg" id="productImg">
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="./img/paper1.jpg" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./img/paper2.jpg" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./img/paper3.jpg" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./img/paper2.jpg" class="small-img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="product-info">
+                    <p>Home/ Paper</p>
+                    <h1>A4 Paper by Columbus</h1>
+
+                    <div class="product-alternative">
+                        <h4><i>670kr</i></h4>
+                        <h1 class="cart-price">kr656.00</h1>
+                        <select>
+                            <option>Color</option>
+                            <option>Wite</option>
+                            <option>Red</option>
+                            <option>Blue</option>
+                            <option>Pink</option>
+                        </select>
+                        <input class="cart-quantity-input" type="number" value="0" onchange="calculateAmount(this.value)">
+                        
+                        <button><a href="#" class="btn">Buy</a></button>
+
+                    </div>
+                </div>
+                <h3 id="product-description-title">Product Detailes</h3>
+                <p id="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                    imperdiet, nulla et dictum
+                    interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula
+                        venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus
+                        vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In
+                        at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+                        venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
+                        porta.</span></p>
+                <button onclick="hideText()" id="buttonHide">Read more</button>
+            </div>
+
+        </div>
+    </div>
+    <!---------------inspiration------------------>
+
+    <div class="inspirations-container">
+        <table>
+            <tr class="inspiration-table">
+
+                <td>
+                    <div class="ins-col">
+                        <h3>Paper is awesome!</h3>
+                        <p>ipsum dolor, sit amet consectetur adipisicing elit. Asperiores sit praesentium eos sint, id
+                            qui autem porro esse.</p>
+                    </div>
+
+                </td>
+                <td>
+                    <div class="ins-col">
+                        <h3>Paper is awesome!</h3>
+                        <p>ipsum dolor, sit amet consectetur adipisicing elit. Asperiores sit praesentium eos sint, id
+                            qui autem porro esse reiciendis natus, tempora distinctio! Nisi excepturi blanditiis in,
+                            reiciendis odit sint ad.</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="ins-col">
+                        <h3>Paper is awesome!</h3>
+                        <p>ipsum dolor, sit amet consectetur adipisicing elit. Asperiores sit praesentium eos sint, id
+                            .</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <!---------------footer--------------->
+
+    <footer class="footer">
+        <div class="footer-leftContent">
+            <img src="./img/OfficeSupplies.png" width="225px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos distinctio qui eveniet omnis dolorem autem
+                esse, nemo deserunt inventore, aut quo architecto veritatis. Corrupti sint nemo adipisci unde, illo
+                illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sunt excepturi in dolor nihil
+                hic alias quisquam nam eveniet quis, tempora vel, ipsum officiis non illum enim minima libero
+                praesentium.</p>
+        </div>
+        <div class="footer-middleContent">
+            <table>
+                <tr>
+                    <th>
+                        <h3>Best seller</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td><a href="#">A4</a></td>
+                    <td><a href="#">A4</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">A5</a></td>
+                    <td><a href="#">A5</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Pens</a></td>
+                    <td><a href="#">Pens</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Staplers</a></td>
+                    <td><a href="#">Staplers</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer-rightContent">
+
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/ali-mesbahi-b017081b9/" target="_blank"><img
+                            src="./img/facebook.png" alt="facebook" width="30px"></a></li>
+                <li><a href="https://www.linkedin.com/in/ali-mesbahi-b017081b9/" target="_blank"><img
+                            src="./img/twitter.png" alt="twitter" width="30px"></a></li>
+                <li><a href="https://www.linkedin.com/in/ali-mesbahi-b017081b9/" target="_blank"><img
+                            src="./img/linkedin.png" alt="linkedin" width="30px"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!----------------js för product gallery-------------->
+    <script>
+        var productImg = document.getElementById("productImg");
+        var smallImg = document.getElementsByClassName("small-img");
+        smallImg[0].onclick = function () {
+            productImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick = function () {
+            productImg.src = smallImg[1].src;
+        }
+
+        smallImg[2].onclick = function () {
+            productImg.src = smallImg[2].src;
+        }
+        smallImg[3].onclick = function () {
+            productImg.src = smallImg[3].src;
+        }
+    </script>
+
+</body>
+
+</html>
